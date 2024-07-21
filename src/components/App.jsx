@@ -6,6 +6,7 @@ import friendsData from '../data/friends.json';
 import transactionsData from '../data/transactions.json';
 import TransactionHistory from './TransactionHistory/TransactionHistory';
 import Section from './Section/Section';
+import Container from './Container/Container';
 
 
 function App() {
@@ -16,19 +17,25 @@ function App() {
   return (
     <div>
       <Section title="Profile">
+        <Container>
           <Profile
             username={userData.username}
             tag={userData.tag}
             location={userData.location}
-        avatar={userData.avatar}
-        stats={userData.stats}
-        /> 
+            avatar={userData.avatar}
+            stats={userData.stats}
+          /> 
+          </Container>
       </Section>
       <Section title="Friends">
-        <FriendList friends={friendsData} />
+        <Container>
+          <FriendList friends={friendsData} />
+          </Container>
       </Section>
       <Section title="Transactions">
-        <TransactionHistory items={transactionsData} />
+        <Container>
+          <TransactionHistory items={transactionsData} />
+          </Container>
         </Section>
   </div>
   )
