@@ -1,12 +1,13 @@
-// import React from 'react'
+import React from 'react'
+import css from "./Section.module.css"
 
-// const Section = (title, children) => {
-//     return (
-//         <Section>
-//             <h2>{title}</h2>
-//             {children}
-//         </Section>
-//     );
-// };
+const Section = ({title, children}) => {
+    return (
+        <section className={css.section}>
+            <h2 className={css.sectionTitle}>{title}</h2>
+            {children}
+        </section>
+    );
+};
 
-// export default Section;
+export default Section;
