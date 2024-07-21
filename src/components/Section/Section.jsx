@@ -6,7 +6,7 @@
 //             <h2>{title}</h2>
 //             {children}
 //         </Section>
-//     )
+//     );
 // };
 
 // export default Section;
